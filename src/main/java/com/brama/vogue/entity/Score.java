@@ -29,4 +29,9 @@ public class Score {
 	public void setScore(Float score) {
 		this.score = score;
 	}
+
+	@Override
+	public String toString() {
+		return "Score{" + "term='" + this.term + "'}";
+	}
 }
