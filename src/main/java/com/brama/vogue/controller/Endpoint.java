@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.brama.vogue.consumer.WebServiceConsumer;
 import com.brama.vogue.entity.Score;
-import com.brama.vogue.entity.response.ApiResponse;
 import com.brama.vogue.service.ScoreService;
 
 @RestController
@@ -20,18 +18,8 @@ public class Endpoint {
 	@Autowired
 	private ScoreService contentService;
 
-	@Autowired
-	private WebServiceConsumer webServiceConsumer;
-
 	@RequestMapping("/score")
-	public Score getScore(@RequestParam(value = "term", defaultValue = "") String term) {
+	public Score getScore(@RequestParam(value = "term") String term) {
 		return contentService.getScore(term);
 	}
-
-	@RequestMapping("")
-	public ApiResponse defaultEndpoint(@RequestParam(value = "term", defaultValue = "") String term) {
-		return webServiceConsumer.fetchScore(term);
-
-	}
-
 }
