@@ -1,6 +1,10 @@
 package com.brama.vogue.entity;
 
-public class Score {
+import java.io.Serializable;
+
+public class Score implements Serializable {
+
+	private static final long serialVersionUID = -194523646242043645L;
 
 	private String term;
 
