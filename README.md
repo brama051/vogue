@@ -1,6 +1,6 @@
 # Code Vogue API Doc
 
-Service is running on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
+Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 
 ## Basic test score response
 
