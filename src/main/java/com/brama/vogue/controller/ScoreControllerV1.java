@@ -1,7 +1,7 @@
 package com.brama.vogue.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +25,7 @@ public class ScoreControllerV1 {
 	 *            the term
 	 * @return the score
 	 */
-	@RequestMapping({ "/v1/score", "/score" })
+	@GetMapping({ "/v1/score", "/score" })
 	public Score getScore(@RequestParam(value = "term") String term) {
 		return contentService.getScore(term);
 	}

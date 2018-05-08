@@ -1,8 +1,8 @@
 package com.brama.vogue.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.brama.vogue.entity.Score;
@@ -28,7 +28,7 @@ public class ScoreControllerV2 {
 	 *            the term
 	 * @return the score V 2
 	 */
-	@RequestMapping({ "/v2/scores/{term}", "/scores/{term}" })
+	@GetMapping({ "/v2/scores/{term}", "/scores/{term}" })
 	public JsonApiObject getScore(@PathVariable String term) {
 		Score score = contentService.getScore(term);
 
