@@ -2,9 +2,9 @@
 
 Service is running on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 
-## Basic test score
+## Basic test score response
 
-`GET /score?term=php` or `GET /v1/score?term=php` [DEMO](https://code-vogue.herokuapp.com/score?term=php)
+`GET /score?term=php` or `GET /v1/score?term=php` [Heroku DEMO](https://code-vogue.herokuapp.com/score?term=php)
 
 ```json
 {
@@ -13,9 +13,9 @@ Service is running on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 }
 ```
 
-## JsonApi.org compliant version
+## JsonApi.org compliant response version
 
-`GET /scores/php` or `GET /v1/scores/php` [DEMO](https://code-vogue.herokuapp.com/scores/php)
+`GET /scores/php` or `GET /v1/scores/php` [Heroku DEMO](https://code-vogue.herokuapp.com/scores/php)
 
 ```json
 {
