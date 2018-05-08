@@ -1,7 +1,5 @@
 package com.brama.vogue.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,12 +9,10 @@ import com.brama.vogue.entity.Score;
 import com.brama.vogue.service.ScoreService;
 
 /**
- * The Class Endpoint is a controller that serves data as REST documents.
+ * The Class ScoreController is a controller that serves data as REST documents.
  */
 @RestController
-public class ScoreController {
-
-	private static final Logger logger = LoggerFactory.getLogger(ScoreController.class);
+public class ScoreControllerV1 {
 
 	@Autowired
 	private ScoreService contentService;
@@ -29,7 +25,7 @@ public class ScoreController {
 	 *            the term
 	 * @return the score
 	 */
-	@RequestMapping("/score")
+	@RequestMapping({ "/v1/score", "/score" })
 	public Score getScore(@RequestParam(value = "term") String term) {
 		return contentService.getScore(term);
 	}

@@ -2,7 +2,6 @@ package com.brama.vogue.entity;
 
 import java.io.Serializable;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Score is a serializable POJO class that represents Score entity.
  *
@@ -21,6 +20,12 @@ public class Score implements Serializable {
 
 	/**
 	 * Instantiates a new score.
+	 */
+	public Score() {
+	}
+
+	/**
+	 * Instantiates a new score.
 	 *
 	 * @param term
 	 *            the term
@@ -32,10 +37,8 @@ public class Score implements Serializable {
 		this.setScore(score);
 	}
 
-	/**
-	 * Instantiates a new score.
-	 */
-	public Score() {
+	public Score(String term, float score, String version) {
+		this(term, score);
 	}
 
 	/**
