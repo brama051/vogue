@@ -14,9 +14,9 @@ import com.brama.vogue.service.ScoreService;
  * The Class Endpoint is a controller that serves data as REST documents.
  */
 @RestController
-public class Endpoint {
+public class ScoreController {
 
-	private static final Logger logger = LoggerFactory.getLogger(Endpoint.class);
+	private static final Logger logger = LoggerFactory.getLogger(ScoreController.class);
 
 	@Autowired
 	private ScoreService contentService;
