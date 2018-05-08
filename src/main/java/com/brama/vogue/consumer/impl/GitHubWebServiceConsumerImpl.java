@@ -22,7 +22,7 @@ public class GitHubWebServiceConsumerImpl implements WebServiceConsumer {
 
 	/**
 	 * Makes a HTTP request to https://api.github.com/search/issues?q={term}
-	 * replacing a term with api consumer provided keyword. The response JSON string
+	 * replacing a term with API consumer provided keyword. The response JSON string
 	 * will be unmarshalled to a CountDto object.
 	 * 
 	 * @param String
