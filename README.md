@@ -33,12 +33,10 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	<tr>
         	<td>Success Response</td>
         	<td>
-			<pre>
-{
+			<pre>{
 	"term": "php",
 	"score": 3.4168158
-}
-			</pre>
+}</pre>
 		</td>
 	</tr>
 	<tr>
@@ -84,8 +82,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	<tr>
         	<td>Success Response</td>
         	<td>
-			<pre>
-{
+			<pre>{
 	"data": {
 		"type": "score",
 		"id": "php",
@@ -96,8 +93,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	"jsonapi": {
 		"version": "2.0"
 	}
-}
-			</pre>
+}</pre>
 		</td>
 	</tr>
 	<tr>
