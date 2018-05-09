@@ -2,22 +2,81 @@
 
 Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 
-## Basic test score response
+ ## Basic test score response
 
-`GET /score?term=php` or `GET /v1/score?term=php` [Heroku DEMO](https://code-vogue.herokuapp.com/score?term=php)
-
-```json
+<table>
+	<tr>
+		<td>Title</td>
+		<td>Get popularity of a provided term among GithHub issues</td>        
+	</tr>
+	<tr>
+		<td>URL</td>
+		<td>
+			/score?term={term}</br>
+			/v1/score?term={term}
+		</td>
+	</tr>
+	<tr>
+        	<td>Method</td>
+        	<td>GET</td>
+	</tr>
+	<tr>
+        	<td>URL Params</td>
+        	<td>
+			term=[string] [required]
+		</td>
+	</tr>
+	<tr>
+        	<td>Success Response</td>
+        	<td>
+			<pre>
 {
 	"term": "php",
 	"score": 3.4168158
 }
-```
+			</pre>
+		</td>
+	</tr>
+	<tr>
+        	<td>Demo</td>
+        	<td>
+			<a href="https://code-vogue.herokuapp.com/score?term=php">Heroku DEMO</a>
+		</td>
+	</tr>
+</table>
+
 
 ## JsonApi.org compliant response version
 
-`GET /scores/php` or `GET /v1/scores/php` [Heroku DEMO](https://code-vogue.herokuapp.com/scores/php)
-
-```json
+<table>
+	<tr>
+		<td>Title</td>
+		<td>
+			Get popularity of a provided term among GithHub issue.<br/>
+			The same as Response is JsonApi.org compliant
+		</td>        
+	</tr>
+	<tr>
+		<td>URL</td>
+		<td>
+			/v2/scores/{term}</br>
+			/scores/{term}
+		</td>
+	</tr>
+	<tr>
+        	<td>Method</td>
+        	<td>GET</td>
+	</tr>
+	<tr>
+        	<td>URL Params</td>
+        	<td>
+			term=[string] [required]
+		</td>
+	</tr>
+	<tr>
+        	<td>Success Response</td>
+        	<td>
+			<pre>
 {
 	"data": {
 		"type": "score",
@@ -30,7 +89,16 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 		"version": "2.0"
 	}
 }
-```
+			</pre>
+		</td>
+	</tr>
+	<tr>
+        	<td>Demo</td>
+        	<td>
+			<a href="https://code-vogue.herokuapp.com/score?term=php">Heroku DEMO</a>
+		</td>
+	</tr>
+</table>
 
 
 
