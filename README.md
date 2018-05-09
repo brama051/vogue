@@ -27,6 +27,10 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 		</td>
 	</tr>
 	<tr>
+		<td>Header</td>
+		<td></td>
+	</tr>
+	<tr>
         	<td>Success Response</td>
         	<td>
 			<pre>
@@ -74,6 +78,10 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 		</td>
 	</tr>
 	<tr>
+		<td>Header</td>
+		<td></td>
+	</tr>
+	<tr>
         	<td>Success Response</td>
         	<td>
 			<pre>
@@ -95,7 +103,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	<tr>
         	<td>Demo</td>
         	<td>
-			<a href="https://code-vogue.herokuapp.com/score?term=php">Heroku DEMO</a>
+			<a href="https://code-vogue.herokuapp.com/scores/php">Heroku DEMO</a>
 		</td>
 	</tr>
 </table>
