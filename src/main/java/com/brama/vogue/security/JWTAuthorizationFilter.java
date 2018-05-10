@@ -1,8 +1,7 @@
 package com.brama.vogue.security;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.PublicKey;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
@@ -16,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import org.springframework.util.ResourceUtils;
 
 import io.jsonwebtoken.Jwts;
 
@@ -87,10 +86,11 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 			PublicKey key = null;
 			try {
 				fact = CertificateFactory.getInstance("X.509");
-				FileInputStream is = new FileInputStream(ResourceUtils.getFile("classpath:hearthum.pem"));
+				ClassPathResource classPathResource = new ClassPathResource("hearthum.pem");
+				InputStream is = classPathResource.getInputStream();
 				X509Certificate cer = (X509Certificate) fact.generateCertificate(is);
 				key = cer.getPublicKey();
-			} catch (CertificateException | FileNotFoundException e) {
+			} catch (CertificateException | IOException e) {
 				logger.error(e.getMessage());
 			}
 
