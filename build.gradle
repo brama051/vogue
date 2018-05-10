@@ -33,3 +33,12 @@ dependencies {
    	   
  	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+
+jar {
+   from('src/main/java') {
+      include  '**/*.properties'
+      include  '**/*.xml'
+      include  '**/*.pem'
+   }
+}
