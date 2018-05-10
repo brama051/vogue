@@ -48,7 +48,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 </table>
 
 
-## JsonApi.org compliant response version
+## JsonApi.org compliant request path and response version
 
 <table>
 	<tr>
@@ -56,7 +56,8 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 		<td>
 			Get popularity of a provided term among GithHub issue.<br/>
 			The same as Response is JsonApi.org compliant<br/>
-			Important: This endpoint is protected and  in order to get authorizied, you must provide a JWT in the request header. Example of fetching a token via CURL (the JWT will be in access_token attribute):
+			Important: This endpoint is protected and  in order to get authorizied,<br/>
+			you must provide a JWT in the request header. Example of fetching a token via CURL (the JWT will be in access_token attribute):
 			<pre>curl --request POST \
   --url https://hearthum.eu.auth0.com/oauth/token \
   --header 'content-type: application/json' \
