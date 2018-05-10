@@ -105,7 +105,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	<tr>
         	<td>Demo</td>
         	<td>
-			<a href="https://code-vogue.herokuapp.com/scores/php">Heroku DEMO</a>
+			<a href="https://code-vogue.herokuapp.com/scores/php">Heroku DEMO</a> <- Won't work without Authorization header!
 		</td>
 	</tr>
 </table>
