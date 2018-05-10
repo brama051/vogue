@@ -7,7 +7,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 <table>
 	<tr>
 		<td>Title</td>
-		<td>Get popularity of a provided term among GithHub issues</td>        
+		<td>Get popularity of a provided term among GithHub issues. Note: This endpoint is not protected and can be consumed without any sort of credentials</td>        
 	</tr>
 	<tr>
 		<td>URL</td>
@@ -28,7 +28,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	</tr>
 	<tr>
 		<td>Header</td>
-		<td></td>
+		<td>none</td>
 	</tr>
 	<tr>
         	<td>Success Response</td>
@@ -55,7 +55,12 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 		<td>Title</td>
 		<td>
 			Get popularity of a provided term among GithHub issue.<br/>
-			The same as Response is JsonApi.org compliant
+			The same as Response is JsonApi.org compliant<br/>
+			Important: This endpoint is protected and  in order to get authorizied, you must provide a JWT in the request header. Example of fetching a token via CURL (the JWT will be in access_token attribute):
+			<pre>curl --request POST \
+  --url https://hearthum.eu.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"Git1f3eV6DlZjv17Ms724kyfOYzHcm91","client_secret":"fRplqSgWd8KNOfFksn3szn0xbApRKCjMqCChY68BylE96SqdI_cRebmG01D6pmat","audience":"https://code-vogue.herokuapp.com","grant_type":"client_credentials"}'</pre>
 		</td>        
 	</tr>
 	<tr>
@@ -77,7 +82,7 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	</tr>
 	<tr>
 		<td>Header</td>
-		<td></td>
+		<td>Authorization:Bearer {this is where previously fetched JWT token should be}</td>
 	</tr>
 	<tr>
         	<td>Success Response</td>
