@@ -110,5 +110,8 @@ Service is deployed on Heroku [Code Vogue App](https://code-vogue.herokuapp.com)
 	</tr>
 </table>
 
+# For Develppers
 
+Check out the project and build project with `gradle build`
+To start server, run `gradle bootRun` 
 
